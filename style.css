@@ -1,0 +1,22 @@
+#canvas-holder {
+    /* border: solid 1px black; */
+    width: fit-content;
+    /* height: fit-content; */
+    margin-left: 10px;
+    height: 95vh;
+    overflow-y: auto;
+}
+
+#panel {
+    background: #ffffff96;
+    border: solid 2px black;
+    padding: 10px;
+}
+
+#cell-details {
+    width: 300px;
+}
+
+#cw-width, #cw-height {
+    width: 50px;
+}
