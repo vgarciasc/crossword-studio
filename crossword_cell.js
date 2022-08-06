@@ -91,11 +91,12 @@ class CrosswordCell {
                 translate(- cw.rect_size / 2 - TRIANGLE_SIZE / 2, - 2 * TRIANGLE_SIZE)
                 rotate(PI / 2)
             } else if (arrow == "<_|") {
-                translate(cw.rect_size / 2 - TRIANGLE_SIZE, cw.rect_size - 2 * TRIANGLE_SIZE)
+                scale(1, -1)
+                translate(cw.rect_size / 2 - TRIANGLE_SIZE, - cw.rect_size - 2 * TRIANGLE_SIZE)
                 rotate(PI / 2)
             } else if (arrow == "|_>") {
-                scale(-1, 1)
-                translate(- cw.rect_size / 2 - TRIANGLE_SIZE / 2, cw.rect_size - 2 * TRIANGLE_SIZE)
+                scale(-1, -1)
+                translate(- cw.rect_size / 2 - TRIANGLE_SIZE / 2, - cw.rect_size - 2 * TRIANGLE_SIZE)
                 rotate(PI / 2)
             }
 
