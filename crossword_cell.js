@@ -98,9 +98,21 @@ class CrosswordCell {
                 scale(-1, -1)
                 translate(- cw.rect_size / 2 - TRIANGLE_SIZE / 2, - cw.rect_size - 2 * TRIANGLE_SIZE)
                 rotate(PI / 2)
+            } else if (arrow == "/^") {
+                translate(cw.rect_size + TRIANGLE_SIZE * 1.15, - TRIANGLE_SIZE / 2)
+                rotate(- 3 * PI / 4)
+            } else if (arrow == "\\V") {
+                translate(cw.rect_size + TRIANGLE_SIZE/2, cw.rect_size + 1.15 * TRIANGLE_SIZE)
+                rotate(- PI / 4)
+            } else if (arrow == "^\\") {
+                translate(-TRIANGLE_SIZE/2, - 1.15 * TRIANGLE_SIZE)
+                rotate(3 * PI / 4)
+            } else if (arrow == "V/") {
+                translate(- 1.15 * TRIANGLE_SIZE, cw.rect_size + TRIANGLE_SIZE / 2)
+                rotate(PI / 4)
             }
 
-            if (["->", "^", "<-", "V"].includes(arrow)) {
+            if (["->", "^", "<-", "V", "/^", "^\\", "\\V", "V/"].includes(arrow)) {
                 line(TRIANGLE_SIZE / 2, - TRIANGLE_SIZE, TRIANGLE_SIZE / 2, 0)
                 triangle(0, 0, TRIANGLE_SIZE, 0, TRIANGLE_SIZE / 2, TRIANGLE_SIZE)
             } else if (["V-", "-V", "^-", "-^", "<-|", "|->", "<_|", "|_>"].includes(arrow)) {
