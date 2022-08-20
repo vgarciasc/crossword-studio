@@ -7,55 +7,67 @@
     <script src="crossword_cell.js"></script>
     <script src="crossword.js"></script>
     <script src="sketch.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body>
     <div style="display: flex;">
         <div id="panel">
+            <span style="font-weight: bold; font-size: 28px;">Crossword Studio</span>
+            <a class="github-button" href="https://github.com/vgarciasc/crossword-studio" data-icon="octicon-star" data-show-count="true" aria-label="Star vgarciasc/crossword-studio on GitHub">Star</a>
+            <br>
+            For instructions, go <a href="https://github.com/vgarciasc/crossword-studio">here</a>.
+            <!-- Place this tag where you want the button to render. -->
+            <br><br>
             <div id="board-configs">
-                <b>BOARD SETTINGS</b>
+                <details>
+                    <summary><b>BOARD SETTINGS</b></summary>
+                    <hr class="soft">
+                    Width: <input id="cw-width" value="4"/>, Height: <input id="cw-height" value="4"/>
+                    <br>
+                    Default font size: <input id="cw-font-size" value="12"/>
+                    <br>
+                    Rectangle size: <input id="cw-rect-size" value="100"/>
+                    <br><br>
+                    <button onclick="saveBoard()">Save</button>
+                    <!-- <button onclick="resetBoard()">Reset</button> -->
+                </details>
                 <hr>
-                Width: <input id="cw-width" value="4"/>, Height: <input id="cw-height" value="4"/>
-                <br>
-                Default font size: <input id="cw-font-size" value="12"/>
-                <br>
-                Rectangle size: <input id="cw-rect-size" value="100"/>
-                <br><br>
-                <button onclick="saveBoard()">Save</button>
-                <button onclick="resetBoard()">Reset</button>
-                <br>
-                <br>
             </div>
             <div id="cell-details">
-                <b>CELL DETAILS</b>
+                <details open="">
+                    <summary><b>CELL DETAILS</b></summary>
+                    <hr class="soft">
+                    Position: (<span id="cell-pos">-1, -1</span>)
+                    <br>
+                    Hint: <br>
+                    <textarea id="cell-hint" type="text" style="height: 50px; width: 100%"></textarea>
+                    <br>
+                    Separations: <input id="cell-separations" type="text"></input>
+                    <br>
+                    Font sizes: <input id="cell-font-sizes" type="text"></input>
+                    <br>
+                    Arrows: <input id="cell-arrows" type="text"></input>
+                    <br>
+                    Cell Format: <input id="cell-format" type="text"></input>
+                    <br>
+                    <br>
+                    <button onclick="savePanel()">Save</button>
+                    <br>
+                    <br>
+                </details>
                 <hr>
-                Position: (<span id="cell-pos">-1, -1</span>)
-                <br>
-                Hint: <br>
-                <textarea id="cell-hint" type="text" style="height: 50px; width: 100%"></textarea>
-                <br>
-                Separations: <input id="cell-separations" type="text"></input>
-                <br>
-                Font sizes: <input id="cell-font-sizes" type="text"></input>
-                <br>
-                Arrows: <input id="cell-arrows" type="text"></input>
-                <br>
-                Cell Format: <input id="cell-format" type="text"></input>
-                <br>
-                <br>
-                <button onclick="savePanel()">Save</button>
-                <br>
-                <br>
             </div>
             <div id="import-configs">
-                <b>IMPORTING & EXPORTING</b>
-                <hr>
-                Board data:
-                <br>
-                <textarea id="cw-data" type="text" style="height: 50px; width: 100%"></textarea>
-                <button onclick="updateBoard()">Update</button>
-                <button onclick="loadBoard()">Load</button>
-                <br>
-                <br>
+                <details>
+                    <summary><b>IMPORTING & EXPORTING</b></summary>
+                    <hr class="soft">
+                    Board data:
+                    <br>
+                    <textarea id="cw-data" type="text" style="height: 50px; width: 100%"></textarea>
+                    <button onclick="updateBoard()">Update</button>
+                    <button onclick="loadBoard()">Load</button>
+                </details>
             </div>
         </div>
         <div id="canvas-holder"></div>
