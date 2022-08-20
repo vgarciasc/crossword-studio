@@ -30,6 +30,7 @@ function setup() {
 
     canvas = createCanvas(100, 100);
     canvas.parent("canvas-holder");
+    canvas.mouseClicked(canvasMouseClicked);
 
     saveBoard();
 
@@ -45,7 +46,7 @@ function draw() {
     cw.draw()
 }
 
-function mouseClicked() {
+function canvasMouseClicked() {
     if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
         cw.onClick();
         updatePanel();
