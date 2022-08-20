@@ -45,3 +45,4 @@ Menu for constructing the crossword, one cell at a time.
 Menu for saving and uploading crosswords.
 
 - **Update**: updates the text area with the JSON representation of the current crossword.
+- **Load**: replaces the current crossword with the one represented in the text area's JSON code (this will remove current changes!)
