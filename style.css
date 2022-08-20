@@ -20,3 +20,7 @@
 #cw-width, #cw-height {
     width: 50px;
 }
+
+hr.soft {
+    border: solid 1px lightgray;
+}
