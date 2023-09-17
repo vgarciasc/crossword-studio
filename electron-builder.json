@@ -1,0 +1,9 @@
+{
+  "appId": "your.app.id",
+  "directories": {
+    "output": "dist"
+  },
+  "win": {
+    "target": "nsis"
+  }
+}
